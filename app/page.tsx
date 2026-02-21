@@ -3,8 +3,8 @@ import Particles from "@/components/Particles";
 
 const eventDetails = [
   { label: "Tanggal", value: "Kamis, 7 Maret" },
-  { label: "Waktu", value: "Ba'da Ashar hingga Menjelang Buka" },
-  { label: "Lokasi", value: "Aula Silaturahmi Organisasi" },
+  { label: "Waktu", value: "Ba'da Ashar hingga Selesai" },
+  { label: "Lokasi", value: "Panti" },
 ];
 
 export default function Home() {
@@ -16,11 +16,8 @@ export default function Home() {
 
       <main className="relative z-10 mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 py-8 sm:px-6 md:py-14">
         <section className="glass-card rounded-3xl px-6 py-12 text-center shadow-2xl sm:px-10 md:py-16">
-          <p className="mb-4 inline-flex rounded-full border border-[#D4AF37]/50 bg-[#D4AF37]/15 px-4 py-1 text-xs font-semibold tracking-[0.22em] text-[#D4AF37] uppercase">
-            Undangan Spesial
-          </p>
           <h1 className="font-display text-4xl leading-tight font-bold tracking-wide text-[#F8FAFC] sm:text-5xl md:text-6xl">
-            Ramadhan Berbagi
+            Membawa Berkah Bersama ELITE
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-sm text-slate-300 sm:text-base">
             Mari hadir dan menguatkan ukhuwah bersama anggota serta alumni dalam malam penuh keberkahan.
