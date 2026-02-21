@@ -1,31 +1,35 @@
+import CountdownTimer from "@/components/CountdownTimer";
 import Ornaments from "@/components/Ornaments";
 import Particles from "@/components/Particles";
 
 const eventDetails = [
-  { label: "Tanggal", value: "Kamis, 7 Maret" },
+  { label: "Tanggal", value: "Sabtu, 7 Maret 2026" },
   { label: "Waktu", value: "Ba'da Ashar hingga Selesai" },
   { label: "Lokasi", value: "Panti" },
 ];
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen overflow-hidden bg-[linear-gradient(145deg,#071A2B_0%,#0B2A3C_55%,#0A2234_100%)] text-slate-50">
+    <div className="relative min-h-screen overflow-hidden bg-[linear-gradient(150deg,#071A2B_0%,#0C2B3F_55%,#0A2234_100%)] text-slate-50">
       <Particles />
       <Ornaments />
-      <div className="islamic-pattern absolute inset-0 opacity-25" aria-hidden="true" />
+      <div className="islamic-pattern absolute inset-0 opacity-20" aria-hidden="true" />
 
       <main className="relative z-10 mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 py-8 sm:px-6 md:py-14">
         <section className="glass-card rounded-3xl px-6 py-12 text-center shadow-2xl sm:px-10 md:py-16">
-          <h1 className="font-display text-4xl leading-tight font-bold tracking-wide text-[#F8FAFC] sm:text-5xl md:text-6xl">
-            Membawa Berkah Bersama ELITE
+          <p className="text-xs tracking-[0.18em] text-[#D4AF37] uppercase">Ramadhan Berbagi ELITE</p>
+          <h1 className="mx-auto mt-3 max-w-4xl font-display text-4xl leading-[1.15] font-bold text-[#F8FAFC] sm:text-5xl md:text-6xl">
+            Membawa Berkah Bersama
+            <span className="mt-1 block">Keluarga ELITE</span>
           </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-sm text-slate-300 sm:text-base">
-            Mari hadir dan menguatkan ukhuwah bersama anggota serta alumni dalam malam penuh keberkahan.
+          <p className="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-slate-200 sm:text-base">
+            Mari hadir untuk mempererat ukhuwah anggota dan alumni, lalu menebar manfaat bagi sesama di malam
+            Ramadhan yang penuh keberkahan.
           </p>
-          <div className="mt-7 text-[#D4AF37]">
-            <span className="font-display text-3xl font-semibold sm:text-4xl">7 Maret</span>
-          </div>
-          <button className="mt-8 rounded-full border border-[#D4AF37]/70 bg-[#D4AF37]/20 px-7 py-3 text-sm font-semibold text-[#F8FAFC] transition hover:bg-[#D4AF37]/35">
+
+          <CountdownTimer />
+
+          <button className="mt-8 rounded-full border border-[#D4AF37]/60 bg-[#D4AF37]/15 px-7 py-3 text-sm font-semibold text-slate-100 transition hover:bg-[#D4AF37]/25">
             Konfirmasi Hadir
           </button>
         </section>
@@ -47,7 +51,7 @@ export default function Home() {
           </article>
 
           <article className="glass-card rounded-2xl p-6 md:p-8">
-            <h2 className="font-display text-2xl font-semibold text-[#22C55E]">Ajakan Kebaikan</h2>
+            <h2 className="font-display text-2xl font-semibold text-[#9ADAA5]">Ajakan Kebaikan</h2>
             <p className="mt-4 text-sm leading-relaxed text-slate-300">
               Ramadhan adalah waktu terbaik untuk menebar manfaat. Hadirnya kita bukan hanya untuk bertemu,
               tetapi juga menjadi jembatan kebahagiaan bagi mereka yang membutuhkan.
@@ -62,14 +66,14 @@ export default function Home() {
           <h2 className="font-display text-2xl font-semibold text-[#F8FAFC] sm:text-3xl">
             Bersama Menyemai Hangatnya Ramadhan
           </h2>
-          <p className="mx-auto mt-3 max-w-2xl text-sm text-slate-300">
+          <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-slate-300">
             Siapkan hati, hadirkan langkah, dan jadilah bagian dari momen silaturahmi yang penuh makna.
           </p>
           <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
-            <button className="rounded-full bg-[#22C55E]/85 px-6 py-3 text-sm font-semibold text-[#071A2B] transition hover:bg-[#22C55E]">
+            <button className="rounded-full border border-white/25 bg-white/10 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:bg-white/15">
               Hadiri &amp; Berbagi
             </button>
-            <button className="rounded-full border border-[#D4AF37]/60 bg-[#D4AF37]/15 px-6 py-3 text-sm font-semibold text-[#F8FAFC] transition hover:bg-[#D4AF37]/30">
+            <button className="rounded-full border border-[#D4AF37]/60 bg-[#D4AF37]/10 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:bg-[#D4AF37]/20">
               Hubungi Panitia
             </button>
           </div>

@@ -36,3 +36,19 @@ body {
   background-size: 48px 84px;
   background-position: 0 0, 0 0, 24px 42px;
 }
+
+@keyframes lanternSway {
+  0%,
+  100% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+}
+
+.lantern-sway {
+  animation-name: lanternSway;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
