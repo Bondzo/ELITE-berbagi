@@ -25,9 +25,22 @@ const getCountdown = (targetDate: Date): Countdown => {
 
 export default function CountdownTimer() {
   const targetDate = useMemo(() => new Date(TARGET_DATE), []);
-  const [countdown, setCountdown] = useState<Countdown>(() => getCountdown(targetDate));
+  const [mounted, setMounted] = useState(false);
+
+  // ✅ jangan hitung countdown di initial render
+  const [countdown, setCountdown] = useState<Countdown>({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
 
   useEffect(() => {
+    setMounted(true);
+
+    // hitung sekali pas mount biar gak nunggu 1 detik
+    setCountdown(getCountdown(targetDate));
+
     const timer = setInterval(() => {
       setCountdown(getCountdown(targetDate));
     }, 1000);
@@ -35,20 +48,31 @@ export default function CountdownTimer() {
     return () => clearInterval(timer);
   }, [targetDate]);
 
-  const units = [
-    { label: "Hari", value: String(countdown.days).padStart(2, "0") },
-    { label: "Jam", value: String(countdown.hours).padStart(2, "0") },
-    { label: "Menit", value: String(countdown.minutes).padStart(2, "0") },
-    { label: "Detik", value: String(countdown.seconds).padStart(2, "0") },
-  ];
+  const units = mounted
+    ? [
+        { label: "Hari", value: String(countdown.days).padStart(2, "0") },
+        { label: "Jam", value: String(countdown.hours).padStart(2, "0") },
+        { label: "Menit", value: String(countdown.minutes).padStart(2, "0") },
+        { label: "Detik", value: String(countdown.seconds).padStart(2, "0") },
+      ]
+    : [
+        { label: "Hari", value: "--" },
+        { label: "Jam", value: "--" },
+        { label: "Menit", value: "--" },
+        { label: "Detik", value: "--" },
+      ];
 
   return (
     <div className="mt-7">
-      <p className="text-xs tracking-[0.18em] text-slate-300 uppercase">Hitung mundur menuju 7 Maret 2026</p>
+      <p className="text-xs tracking-[0.18em] text-slate-300 uppercase">
+        7 Maret 2026
+      </p>
       <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-4 sm:gap-3">
         {units.map((unit) => (
           <div key={unit.label} className="rounded-xl border border-white/20 bg-white/10 px-3 py-3">
-            <p className="font-display text-2xl leading-none text-[#E4C972] sm:text-3xl">{unit.value}</p>
+            <p className="font-display text-2xl leading-none text-[#E4C972] sm:text-3xl">
+              {unit.value}
+            </p>
             <p className="mt-1 text-[10px] tracking-[0.14em] text-slate-300 uppercase">{unit.label}</p>
           </div>
         ))}

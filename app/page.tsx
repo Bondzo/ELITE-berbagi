@@ -29,9 +29,6 @@ export default function Home() {
 
           <CountdownTimer />
 
-          <button className="mt-8 rounded-full border border-[#D4AF37]/60 bg-[#D4AF37]/15 px-7 py-3 text-sm font-semibold text-slate-100 transition hover:bg-[#D4AF37]/25">
-            Konfirmasi Hadir
-          </button>
         </section>
 
         <section className="grid gap-6 md:grid-cols-2">
@@ -39,14 +36,14 @@ export default function Home() {
             <h2 className="font-display text-2xl font-semibold text-[#D4AF37]">Detail Acara</h2>
             <ul className="mt-4 space-y-4 text-sm text-slate-200">
               {eventDetails.map((item) => (
-                <li key={item.label} className="flex flex-col border-b border-white/10 pb-3 last:border-none last:pb-0">
+                <li key={item.label} className="flex flex-col border-b border-[#2B4A62] pb-3 last:border-none last:pb-0">
                   <span className="text-xs tracking-[0.2em] text-slate-400 uppercase">{item.label}</span>
                   <span className="mt-1 font-medium">{item.value}</span>
                 </li>
               ))}
             </ul>
             <p className="mt-4 text-sm leading-relaxed text-slate-300">
-              Kegiatan meliputi kajian singkat, buka puasa bersama, dan penyaluran paket kebaikan untuk sesama.
+              Kegiatan meliputi kajian singkat, buka puasa bersama, dan mini game robo soccer.
             </p>
           </article>
 
@@ -56,7 +53,7 @@ export default function Home() {
               Ramadhan adalah waktu terbaik untuk menebar manfaat. Hadirnya kita bukan hanya untuk bertemu,
               tetapi juga menjadi jembatan kebahagiaan bagi mereka yang membutuhkan.
             </p>
-            <blockquote className="mt-5 rounded-xl border border-[#D4AF37]/30 bg-white/5 p-4 text-sm italic text-slate-100">
+            <blockquote className="mt-5 rounded-xl border border-[#8C6B1A] bg-[#1A354A] p-4 text-sm italic text-slate-100">
               “Dalam setiap kebaikan yang dibagikan, ada ketenangan hati yang Allah lipatgandakan.”
             </blockquote>
           </article>
@@ -70,17 +67,17 @@ export default function Home() {
             Siapkan hati, hadirkan langkah, dan jadilah bagian dari momen silaturahmi yang penuh makna.
           </p>
           <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
-            <button className="rounded-full border border-white/25 bg-white/10 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:bg-white/15">
+            <button className="rounded-full border border-[#4A6278] bg-[#274157] px-6 py-3 text-sm font-semibold text-slate-100 transition hover:bg-[#33556F]">
               Hadiri &amp; Berbagi
             </button>
-            <button className="rounded-full border border-[#D4AF37]/60 bg-[#D4AF37]/10 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:bg-[#D4AF37]/20">
+            <button className="rounded-full border border-[#D4AF37] bg-[#D4AF37] px-6 py-3 text-sm font-semibold text-[#0B2233] transition hover:bg-[#E4C972]">
               Hubungi Panitia
             </button>
           </div>
         </section>
       </main>
 
-      <footer className="relative z-10 border-t border-white/10 bg-black/10 px-4 py-6 text-center text-xs text-slate-300 sm:text-sm">
+      <footer className="relative z-10 border-t border-[#2B4A62] bg-[#0B2233] px-4 py-6 text-center text-xs text-slate-300 sm:text-sm">
         <p className="text-[#D4AF37]">Semoga Ramadhan ini membawa berkah, ampunan, dan hati yang saling menguatkan.</p>
         <p className="mt-2 text-slate-400">© 2026 Ramadhan Berbagi • Anggota &amp; Alumni Organisasi</p>
       </footer>

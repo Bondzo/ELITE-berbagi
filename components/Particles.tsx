@@ -8,7 +8,7 @@ export default function Particles() {
   ];
 
   return (
-    <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
+    <div className="pointer-events-none absolute left-0 right-0 top-0 h-48 z-0 overflow-hidden">
       {lanterns.map((lantern) => (
         <svg
           key={lantern.left}
