@@ -17,30 +17,30 @@ const eventDetails2 = [
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen overflow-hidden bg-[linear-gradient(150deg,#fff0c9_0%,#d4e4ed_55%,#fff0c9_100%)] text-[#2c3e47]">
-      <Particles />
-      <Ornaments />
-      <div className="islamic-pattern absolute inset-0 opacity-20" aria-hidden="true" />
+      <div 
+        className="relative min-h-screen overflow-hidden text-[#2c3e47]"
+        style={{
+          backgroundImage: 'url(/bg-no-bg.png), linear-gradient(150deg, #fff0c9 0%, #d4e4ed 55%, #fff0c9 100%)',
+          backgroundSize: '100% auto, cover',
+          backgroundPosition: 'top center, center',
+          backgroundRepeat: 'no-repeat, no-repeat',
+          backgroundBlendMode: 'multiply'
+        }}
+      >
+      {/*<Ornaments />
+      <div className="islamic-pattern absolute inset-0 opacity-20" aria-hidden="true" /> */}
 
       <main className="relative z-10 mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 py-8 sm:px-6 md:py-14">
-        <section className="glass-card rounded-3xl px-6 py-12 text-center shadow-2xl sm:px-10 md:py-16">
+        <section className="rounded-3xl px-6 py-12 text-center sm:px-10 md:py-16">
           {/* LOGO BANNER */}
-          <div className="-mx-6 -mt-12 sm:-mx-10 md:-mt-16 mb-8 rounded-t-3xl overflow-hidden">
-            <div className="relative flex items-center justify-center gap-4 px-8 py-4 bg-gradient-to-r from-[#3D2B00] via-[#D4AF37] to-[#3D2B00]">
-              {/* garis stripe dekor */}
-              <div className="absolute inset-0 opacity-10"
-                style={{backgroundImage: 'repeating-linear-gradient(90deg,transparent,transparent 20px,rgba(255,255,255,0.3) 20px,rgba(255,255,255,0.3) 21px)'}}
-              />
-              {/* shimmer bawah */}
-              <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/50 to-transparent" />
-
-              <div className="relative z-10 bg-white rounded-lg p-0 shadow-lg overflow-hidden">
-                <img src="/logo.png" alt="Logo ELITE" className="h-14 w-auto block" />
-              </div>
-              <div className="relative z-10 w-px h-8 bg-white/40" />
-              <span className="relative z-10 text-base tracking-[0.25em] text-white/90 uppercase font-semibold">
+          <div className="flex flex-col items-center mb-6 mt-2">
+            <img src="/logo.png" alt="Logo ELITE" className="h-24 w-auto" />
+            <div className="flex items-center gap-3 mt-3">
+              <div className="w-8 h-px bg-[#ff8c1f]/60" />
+              <p className="text-xs tracking-[0.25em] text-[#ff8c1f] uppercase font-semibold">
                 Elite Berbagi · 2026
-              </span>
+              </p>
+              <div className="w-8 h-px bg-[#ff8c1f]/60" />
             </div>
           </div>
           <h1 className="mx-auto mt-3 max-w-4xl font-display text-4xl leading-[1.15] font-bold text-[#2c3e47] sm:text-5xl md:text-6xl">
@@ -58,6 +58,15 @@ export default function Home() {
 
         </section>
 
+        {/* GARIS PEMISAH */}
+        <div className="flex items-center gap-3 px-4">
+          <div className="flex-1 h-px bg-[#ff8c1f]/40" />
+          <span className="text-xs tracking-[0.25em] text-[#ff8c1f] uppercase font-semibold">
+            Agenda
+          </span>
+          <div className="flex-1 h-px bg-[#ff8c1f]/40" />
+        </div>
+        
         <section className="grid grid-cols-2 gap-4">
           <EventModal
             event={{

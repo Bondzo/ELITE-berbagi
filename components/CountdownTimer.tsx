@@ -44,7 +44,7 @@ export default function CountdownTimer() {
   return (
     <div className="mt-7">
       <p className="text-xs tracking-[0.18em] text-[#445e70] uppercase">Hitung mundur menuju 7 Maret 2026</p>
-      <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-4 sm:gap-3">
+      <div className="mt-3 grid grid-cols-4 gap-2">
         {units.map((unit) => (
           <div key={unit.label} className="rounded-xl border border-[#445e70]/30 bg-[#445e70]/10 px-3 py-3">
             <p className="font-display text-2xl leading-none text-[#ff8c1f] sm:text-3xl">{unit.value}</p>
