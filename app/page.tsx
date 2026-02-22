@@ -1,3 +1,4 @@
+import Link from "next/link";
 import CountdownTimer from "@/components/CountdownTimer";
 import Ornaments from "@/components/Ornaments";
 import Particles from "@/components/Particles";
@@ -67,12 +68,18 @@ export default function Home() {
             Siapkan hati, hadirkan langkah, dan jadilah bagian dari momen silaturahmi yang penuh makna.
           </p>
           <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
-            <button className="rounded-full border border-[#4A6278] bg-[#274157] px-6 py-3 text-sm font-semibold text-slate-100 transition hover:bg-[#33556F]">
-              Hadiri &amp; Berbagi
-            </button>
-            <button className="rounded-full border border-[#D4AF37] bg-[#D4AF37] px-6 py-3 text-sm font-semibold text-[#0B2233] transition hover:bg-[#E4C972]">
+            <Link
+              href="/MiniSoccer"
+              className="rounded-full border border-[#4A6278] bg-[#274157] px-6 py-3 text-sm font-semibold text-slate-100 transition hover:bg-[#33556F]"
+            >
+              Event Spesial
+            </Link>
+            <a
+              href="https://wa.me/6281234567890"
+              className="rounded-full border border-[#D4AF37] bg-[#D4AF37] px-6 py-3 text-sm font-semibold text-[#0B2233] transition hover:bg-[#E4C972]"
+            >
               Hubungi Panitia
-            </button>
+            </a>
           </div>
         </section>
       </main>
