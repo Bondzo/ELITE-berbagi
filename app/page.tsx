@@ -2,17 +2,18 @@ import CountdownTimer from "@/components/CountdownTimer";
 import Ornaments from "@/components/Ornaments";
 import Particles from "@/components/Particles";
 import EventModal from "@/components/EventModal";
+import React from "react";
 
 const eventDetails = [
   { label: "Tanggal", value: "Sabtu, 7 Maret 2026" },
-  { label: "Waktu", value: "15.30 - 18.25 WIB" },
-  { label: "Lokasi", value: "Panti Asuhan ..." },
+  { label: "Waktu", value: "15.40 - 18.35 WIB" },
+  { label: "Lokasi", value: "Panti Asuhan Royatul Ummah\nJl. Tubanan Indah II RT.1 Karangpoh Tandes, Tubanan" },
 ];
 
 const eventDetails2 = [
-  { label: "Tanggal", value: "Sabtu, 7 Maret 2026" },
-  { label: "Waktu", value: "12.00 - selesai" },
-  { label: "Lokasi", value: "Imun+ Sport Surabaya" },
+  { label: "Tanggal", value: "Sabtu, 8 Maret 2026" },
+  { label: "Waktu", value: "00.00 - selesai" },
+  { label: "Lokasi", value: "IMUN SPORT CLUB\nJl. Tegalsari No. 14, Kedungdoro, Kec. Tegalsari" },
 ];
 
 export default function Home() {
@@ -72,16 +73,46 @@ export default function Home() {
             event={{
               title: "ELITE BERBAGI",
               details: eventDetails,
-              description: "Kegiatan meliputi pengenalan ELITE, materi ..., fun games ..., ceramah dan doa bersama, buka puasa bersama, serta pembagian hadiah.",
               emoji: "🌙",
+              description: (
+                <>
+                  <p>Yuk ikut meramaikan Elite Berbagi! 🌙</p>
+                  <br />
+                  <p>
+                    Untuk iuran kegiatan sebesar Rp25.000 bisa dibayar langsung di basecamp atau transfer ke <strong>BCA 7901896619</strong> a.n. Mey Adinda.
+                  </p>
+                  <br />
+                  <p>
+                    Terakhir pembayaran s/d 2 Maret Jangan lupa kasih keterangan: <strong>"Iuran elite berbagi (nama)"</strong> dan kirim bukti tf-nya ke cp yang tertera ya!
+                  </p>
+                  <br />
+                  <p>Ditunggu kehadirannya 🤲✨</p>
+                </>
+                ),              
+              poster: "/posterramadhan.jpeg",
             }}
           />
           <EventModal
             event={{
-              title: "MINI SOCCER",
+              title: "REUNI AKBAR",
               details: eventDetails2,
-              description: "Dalam setiap kebaikan yang dibagikan, ada ketenangan hati yang Allah lipatgandakan.",
               emoji: "⚽",
+              description: (
+                <>
+                  <p>Yuk ikut meramaikan Reuni Akbar Sahur Bareng ELITE All Generation! 🌙</p>
+                  <br />
+                  <p>
+                    Untuk iuran kegiatan sebesar Rp35.000 bisa dibayar langsung di basecamp atau transfer ke <strong>BNI 2009869217</strong> a.n. Rangga Bachtiar Irvansyah.
+                  </p>
+                  <br />
+                  <p>
+                    Terakhir pembayaran s/d 4 Maret Jangan lupa kasih keterangan: <strong>"Iuran sahur (nama)"</strong> dan kirim bukti tf-nya ke cp yang tertera ya!
+                  </p>
+                  <br />
+                  <p>Ditunggu kehadirannya 🤲✨</p>
+                </>
+                ),
+              poster: "/postersahur.jpeg",
             }}
           />
         </section>
