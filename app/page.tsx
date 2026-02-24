@@ -51,7 +51,7 @@ export default function Home() {
             Assalamu’alaikum Wr. Wb. <br></br>
             Segala puji bagi Allah Swt. Tuhan semesta alam yang telah memberikan hidayah-Nya kepada kita semua sehingga bisa melaksanakan 
             ibadah puasa pada Bulan Ramadhan yang penuh berkah ini. Melalui undangan ini kami ingin memberitahukan adanya acara Elite Berbagi 
-            dan acara Mini Soccer. Yang akan diadakan pada hari Sabtu, 7 Maret 2026. 
+            dan acara Reuni akbar sahur bareng ELITE All Generation. Yang akan diadakan pada hari Sabtu, 7 Maret 2026. 
           </p>
 
           <CountdownTimer />
