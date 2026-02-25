@@ -14,66 +14,41 @@ type Countdown = {
 const getCountdown = (targetDate: Date): Countdown => {
   const now = new Date();
   const diff = Math.max(0, targetDate.getTime() - now.getTime());
-
-  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-  const minutes = Math.floor((diff / (1000 * 60)) % 60);
-  const seconds = Math.floor((diff / 1000) % 60);
-
-  return { days, hours, minutes, seconds };
+  return {
+    days: Math.floor(diff / (1000 * 60 * 60 * 24)),
+    hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
+    minutes: Math.floor((diff / (1000 * 60)) % 60),
+    seconds: Math.floor((diff / 1000) % 60),
+  };
 };
 
 export default function CountdownTimer() {
   const targetDate = useMemo(() => new Date(TARGET_DATE), []);
-  const [mounted, setMounted] = useState(false);
-
-  // ✅ jangan hitung countdown di initial render
-  const [countdown, setCountdown] = useState<Countdown>({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
+  const [countdown, setCountdown] = useState<Countdown | null>(null);
 
   useEffect(() => {
-    setMounted(true);
-
-    // hitung sekali pas mount biar gak nunggu 1 detik
     setCountdown(getCountdown(targetDate));
-
     const timer = setInterval(() => {
       setCountdown(getCountdown(targetDate));
     }, 1000);
-
     return () => clearInterval(timer);
   }, [targetDate]);
 
-  const units = mounted
-    ? [
-        { label: "Hari", value: String(countdown.days).padStart(2, "0") },
-        { label: "Jam", value: String(countdown.hours).padStart(2, "0") },
-        { label: "Menit", value: String(countdown.minutes).padStart(2, "0") },
-        { label: "Detik", value: String(countdown.seconds).padStart(2, "0") },
-      ]
-    : [
-        { label: "Hari", value: "--" },
-        { label: "Jam", value: "--" },
-        { label: "Menit", value: "--" },
-        { label: "Detik", value: "--" },
-      ];
+  const units = [
+    { label: "Hari", value: String(countdown?.days ?? "--").padStart(2, "0") },
+    { label: "Jam", value: String(countdown?.hours ?? "--").padStart(2, "0") },
+    { label: "Menit", value: String(countdown?.minutes ?? "--").padStart(2, "0") },
+    { label: "Detik", value: String(countdown?.seconds ?? "--").padStart(2, "0") },
+  ];
 
   return (
     <div className="mt-7">
-      <p className="text-xs tracking-[0.18em] text-slate-300 uppercase">
-        7 Maret 2026
-      </p>
-      <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-4 sm:gap-3">
+      <p className="text-xs tracking-[0.18em] text-[#445e70] uppercase">Hitung mundur menuju 7 Maret 2026</p>
+      <div className="mt-3 grid grid-cols-4 gap-2">
         {units.map((unit) => (
-          <div key={unit.label} className="rounded-xl border border-white/20 bg-white/10 px-3 py-3">
-            <p className="font-display text-2xl leading-none text-[#E4C972] sm:text-3xl">
-              {unit.value}
-            </p>
-            <p className="mt-1 text-[10px] tracking-[0.14em] text-slate-300 uppercase">{unit.label}</p>
+          <div key={unit.label} className="rounded-xl border border-[#445e70]/30 bg-[#445e70]/10 px-3 py-3">
+            <p className="font-display text-2xl leading-none text-[#ff8c1f] sm:text-3xl">{unit.value}</p>
+            <p className="mt-1 text-[10px] tracking-[0.14em] text-[#445e70] uppercase">{unit.label}</p>
           </div>
         ))}
       </div>

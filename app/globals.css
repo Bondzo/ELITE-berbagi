@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #071a2b;
-  --foreground: #f8fafc;
+  --background: #fff0c9;
+  --foreground: #2c3e47;
 }
 
 @theme inline {
@@ -21,18 +21,18 @@ body {
 }
 
 .glass-card {
-  background: linear-gradient(135deg, #17344a, #112b3f);
-  border: 1px solid #32516a;
+  background: linear-gradient(135deg, rgba(68,94,112,0.12), rgba(255,240,201,0.3));
+  border: 1px solid rgba(68, 94, 112, 0.3);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 12px 40px rgba(68, 94, 112, 0.15);
 }
 
 .islamic-pattern {
   background-image:
-    linear-gradient(30deg, rgba(212, 175, 55, 0.12) 12%, transparent 12.5%, transparent 87%, rgba(212, 175, 55, 0.12) 87.5%, rgba(212, 175, 55, 0.12)),
-    linear-gradient(150deg, rgba(212, 175, 55, 0.12) 12%, transparent 12.5%, transparent 87%, rgba(212, 175, 55, 0.12) 87.5%, rgba(212, 175, 55, 0.12)),
-    linear-gradient(90deg, rgba(212, 175, 55, 0.1) 2%, transparent 2.5%, transparent 97%, rgba(212, 175, 55, 0.1) 98%);
+    linear-gradient(30deg, rgba(68,94,112,0.1) 12%, transparent 12.5%, transparent 87%, rgba(68,94,112,0.1) 87.5%, rgba(68,94,112,0.1)),
+    linear-gradient(150deg, rgba(68,94,112,0.1) 12%, transparent 12.5%, transparent 87%, rgba(68,94,112,0.1) 87.5%, rgba(68,94,112,0.1)),
+    linear-gradient(90deg, rgba(255,140,31,0.08) 2%, transparent 2.5%, transparent 97%, rgba(255,140,31,0.08) 98%);
   background-size: 48px 84px;
   background-position: 0 0, 0 0, 24px 42px;
 }
@@ -51,15 +51,4 @@ body {
   animation-name: lanternSway;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
-}
-
-
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
 }
