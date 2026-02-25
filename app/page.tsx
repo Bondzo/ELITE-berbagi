@@ -83,7 +83,7 @@ export default function Home() {
                   </p>
                   <br />
                   <p>
-                    Terakhir pembayaran s/d 2 Maret Jangan lupa kasih keterangan: <strong>"Iuran elite berbagi (nama)"</strong> dan kirim bukti tf-nya ke cp yang tertera ya!
+                    Terakhir pembayaran s/d 5 Maret Jangan lupa kasih keterangan: <strong>"Iuran elite berbagi (nama)"</strong> dan kirim bukti tf-nya ke cp yang tertera ya!
                   </p>
                   <br />
                   <p>Ditunggu kehadirannya 🤲✨</p>
