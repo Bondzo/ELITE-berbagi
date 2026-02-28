@@ -124,7 +124,7 @@ export default function Home() {
           <div className="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-[#445e70] sm:text-base">
             Ada begitu banyaknya cara untuk bersedekah. Rasanya tidak ada lagi alasan kita untuk tidak melakukannya. Apalagi, setelah kita mengetahui banyaknya nikmat Allah dan keutamaan dari bersedekah.
             Mari berbagi untuk saudara saudari kita yang membutuhkan <br></br> <br></br>
-            Berikut kami sediakan QR code dan Nomor Rekening untuk panti asuhan A. <br></br>
+            Berikut kami sediakan QR code dan Nomor Rekening untuk panti asuhan Royatul Ummah. <br></br>
             Semoga dapat bermanfaat dan terimakasih  <br></br>
 
             <div className="mt-6 flex flex-col items-center gap-5">
